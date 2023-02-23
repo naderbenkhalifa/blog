@@ -1,0 +1,27 @@
+<div class="content">
+    <div class="container">
+      &nbsp;
+      <div class="row" *ngFor="let post of posts ">
+        <div class="blogpost">
+          <h3><a href="/post/{{post.id}}" class="blog-title">{{post.title}}</a></h3>
+          <div>
+            <i class="fas fa-user"></i> Author: <p>{{post.username}}</p>
+          </div>
+          <p [innerHTML]="post.content"></p>
+          <div class="btn-group btn-group-sm">
+       
+            <a type="button" href="/post/{{post.id}}" class="btn btn-primary">Read More</a>
+         
+          
+            <button (click)="delete(post.id!)" class="btn btn-danger">delete </button>
+         
+         
+           <a type="button" href="/update/{{post.id}}"  class="btn btn-success">Update</a>
+        
+        </div>
+          <hr>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>

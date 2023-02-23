@@ -1,0 +1,72 @@
+<div class="main-content">
+  <div class="section-content section-content-p30">
+  <div class="container-fluid">
+
+        
+         
+    &nbsp;
+     <h3 class="new-title">Login</h3>
+    
+    &nbsp;
+    <div class="error-msg" *ngIf ="message.length!=0">
+      <i class="fa fa-times-circle"></i>
+      {{message}}
+    </div>
+    <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="login()">
+<div class="form-group">
+    <label for="inputEmail" >Email</label>
+    
+    <input type="text" id="inputEmail" class="form-control"   formControlName="email">
+    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-msg">
+
+      <div *ngIf="email.errors.required">
+        Email is required
+      </div>
+
+      <div *ngIf="email.errors.pattern">
+        Email must be a valid email address format
+      </div>
+    </div>
+    
+  </div>
+  &nbsp;
+  <div class="form-group">
+    <label for="inputPassword" >Password</label>
+    <input type="password" id="inputPassword"  class="form-control"   formControlName="password">
+    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error-msg" >
+
+      <div *ngIf="password.errors.required">
+        Password is required
+      </div>
+
+      <div *ngIf="password.errors.minlength">
+        Password must be at least 8 characters long
+      </div>
+    </div>
+
+  
+  </div>
+  &nbsp;
+  
+<div style="text-align:center">
+    <button   type="submit" class="btn btn-primary btn-sm" >Login</button></div>
+  
+</form>
+</div>
+</div>
+</div>
+ 
+
+
+
+
+
+
+
+  
+
+
+
+
+
+

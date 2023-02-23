@@ -1,0 +1,41 @@
+<div class="container">
+    &nbsp;
+    <div>
+        <h3 class="new-post-title">Update Post</h3>
+      </div>
+  
+    
+        
+    
+    &nbsp;
+        <div class="form-group">
+           <div> <label for="title">Title</label></div>
+     
+            <input 
+                class="formControl"
+                id="title" 
+                type="text" 
+                [(ngModel)]="post.title">
+            
+           
+        </div>
+    &nbsp;
+         
+        <div class="form-group">
+            <label for="body">Body</label>
+           
+            <textarea 
+               
+                id="body" 
+                type="text" 
+                [(ngModel)]="post.content"
+                class="form-control">
+            </textarea>
+           
+        </div>
+      
+        &nbsp;    
+      
+       <div class="button"> <button class="btn btn-success btn-sm" (click)=" update()" >Update</button></div>
+    
+</div>

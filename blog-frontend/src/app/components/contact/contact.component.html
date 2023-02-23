@@ -1,0 +1,29 @@
+<section class="border p-4 d-flex justify-content-center mb-4">
+    <form id="form" class="text-center" style="width: 100%; max-width: 300px">
+    <h2 style="color:royalblue">Contact us</h2>
+    &nbsp;
+ 
+        <div class="mb-4">
+        <input  type="text" id="name" class="form-control" placeholder="Name" name="name"  [(ngModel)]="contact.name"/>
+        </div>
+
+        <div class="mb-4">
+        <input  type="email" id="email" class="form-control" placeholder="Email Adress"  name="email" [(ngModel)]="contact.email"/>
+        </div>
+
+        <div class="mb-4">
+        <input  type="text" id="phone" class="form-control" placeholder="Phone" name="phone" name="phone" [(ngModel)]="contact.phone"/>
+        </div>
+
+        <div class="mb-4">
+        <input  type="text" id="subject" class="form-control" placeholder="Subject" name="subject"  [(ngModel)]="contact.subject"/>
+        </div>
+
+        <div class="mb-4">
+        <textarea  class="form-control" id="message" rows="4" placeholder="Message" name="message" [(ngModel)]="contact.message"></textarea>
+        </div>
+
+        <button type="button" (click)="save()" class="btn btn-primary btn-sm">Send</button>
+
+    </form>
+</section>
